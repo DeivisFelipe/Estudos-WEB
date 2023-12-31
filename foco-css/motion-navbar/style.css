@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0b8c4c;
+}
+
+.navbar {
+  position: relative;
+  width: 500px;
+  height: 90px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  position: relative;
+  display: flex;
+}
+
+.navbar ul li {
+  position: relative;
+  list-style: none;
+}
+
+.navbar ul li a {
+  position: relative;
+  height: 90px;
+  width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.navbar ul li a i {
+  font-size: 30px;
+  color: transparent;
+  -webkit-text-stroke: 2px #0b8c4c;
+  transition: 0.5s;
+}
+
+.navbar ul li.active a i {
+  color: #0b8c4c;
+}
+
+.navbar ul .indicator {
+  position: absolute;
+  height: 36px;
+  width: 25px;
+  background: #0b8c4c;
+  border-radius: 50%;
+  bottom: -19px;
+  left: 34px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.256, 1.55);
+}
+
+.navbar ul .indicator::before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 20px;
+  background: white;
+  left: -15px;
+  bottom: 50%;
+  border-bottom-right-radius: 20px;
+  box-shadow: 0 10px 0 #0b8c4c;
+}
+
+.navbar ul .indicator::after {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 20px;
+  background: white;
+  right: -15px;
+  bottom: 50%;
+  border-bottom-left-radius: 20px;
+  box-shadow: 0 10px 0 #0b8c4c;
+}
